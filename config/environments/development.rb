@@ -45,8 +45,14 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  # Using the local settings for Active Storage
+  config.active_storage.service = :local
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Using the Amazon S3 settings for Active Storage
+config.active_storage.service = :amazon
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
